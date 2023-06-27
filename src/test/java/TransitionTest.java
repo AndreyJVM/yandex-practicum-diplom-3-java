@@ -1,8 +1,8 @@
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import mainPage.RegistrationStellar;
-import mainPage.LoginStellar;
-import mainPage.Transition;
+import main.page.RegistrationStellar;
+import main.page.LoginStellar;
+import main.page.Transition;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package mainPage;
+package main.page;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.JavascriptExecutor;
@@ -31,6 +31,5 @@ public class DeleteStellar {
                 + "xhr.open('DELETE', '" + url + "', true);"
                 + "xhr.setRequestHeader('Authorization', '" + authHeader + "');"
                 + "xhr.send();");
-
     }
 }

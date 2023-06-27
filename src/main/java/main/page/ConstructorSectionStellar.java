@@ -1,4 +1,4 @@
-package mainPage;
+package main.page;
 
 import io.qameta.allure.Step;
 
@@ -24,7 +24,6 @@ public class ConstructorSectionStellar {
     //кнопка перехода конструктора в раздел Булки:
     private static final By BUTTON_TRANS_BUN_CONSTRUCTOR = By.xpath("//span[text()='Булки']");
 
-    //видимый раздел Соусы: $x("//div[starts-with(@class,'tab_tab__1SPyG')]/span")
     private static final By VISIBILITY_SECTION_CONSTRUCTOR_SAUCE = By.xpath("//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[@class = 'text text_type_main-default' and text()='Соусы']");
 
     //видимый раздел Начинки:

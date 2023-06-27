@@ -1,7 +1,7 @@
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import mainPage.ConstructorSectionStellar;
-import mainPage.RegistrationStellar;
+import main.page.ConstructorSectionStellar;
+import main.page.RegistrationStellar;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,14 +15,12 @@ public class ConstructorSectionTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Проверка перехода раздела Соусы в  конструкторе")
+    @DisplayName("Проверка перехода раздела Соусы в конструкторе")
     @Description("Проверка на наличие надписи")
     public void checkTransitionSauce() {
         ConstructorSectionStellar pageSection = new ConstructorSectionStellar(driver);
         pageSection.selectSectionConstructorSauce();
-        Boolean excepted = true;
-        Boolean actual = pageSection.checkSectionSauce();
-        Assert.assertEquals(excepted, actual);
+        Assert.assertTrue(pageSection.checkSectionSauce());
     }
 
     @Test

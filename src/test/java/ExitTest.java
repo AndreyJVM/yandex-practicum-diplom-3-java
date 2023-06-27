@@ -1,10 +1,10 @@
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import mainPage.LoginStellar;
-import mainPage.RegistrationStellar;
-import mainPage.TestValue;
-import mainPage.ExitStellar;
-import mainPage.DeleteStellar;
+import main.page.LoginStellar;
+import main.page.RegistrationStellar;
+import main.page.TestValue;
+import main.page.ExitStellar;
+import main.page.DeleteStellar;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -21,8 +21,8 @@ public class ExitTest extends BaseTest {
         page.clickButtonPersonalAccount();
         page.clickButtonPersonalAccountRegistration();
         page.inputNameUserRegistration(TestValue.NAME);
-        page.inputEmailUserRegistration(TestValue.LOGIN);
-        page.inputPasswordUserRegistration(TestValue.PASSWORD);
+        page.inputEmailUserRegistration(TestValue.TEST_LOGIN_ONE);
+        page.inputPasswordUserRegistration(TestValue.TEST_PASSWORD_ONE);
         page.clickButtonRegistrationByFullFolder();
         pageLogin.waitForLoadEntrance();
         page.transitionMainPage();
@@ -38,8 +38,8 @@ public class ExitTest extends BaseTest {
         page.transitionMainPage();
         try {
             page.clickButtonPersonalAccount();
-            pageLogin.inputEmailLoginAccount(TestValue.LOGIN);
-            pageLogin.inputPasswordLoginAccount(TestValue.PASSWORD);
+            pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+            pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
             pageLogin.clickLoginInAccount();
         } catch (Exception e) {
         }
@@ -60,8 +60,8 @@ public class ExitTest extends BaseTest {
         ExitStellar pageExit = new ExitStellar(driver);
         page.open();
         page.clickButtonPersonalAccount();
-        pageLogin.inputEmailLoginAccount(TestValue.LOGIN);
-        pageLogin.inputPasswordLoginAccount(TestValue.PASSWORD);
+        pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+        pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
         pageLogin.clickLoginInAccount();
         pageLogin.waitForInvisibilityLoadingAnimation();
         page.clickButtonPersonalAccount();

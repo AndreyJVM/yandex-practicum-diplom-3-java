@@ -2,10 +2,10 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Test;
-import mainPage.LoginStellar;
-import mainPage.RegistrationStellar;
-import mainPage.TestValue;
-import mainPage.DeleteStellar;
+import main.page.LoginStellar;
+import main.page.RegistrationStellar;
+import main.page.TestValue;
+import main.page.DeleteStellar;
 
 public class RegistrationWebTest extends BaseTest {
     @Test
@@ -19,16 +19,16 @@ public class RegistrationWebTest extends BaseTest {
         page.clickButtonPersonalAccount();
         page.clickButtonPersonalAccountRegistration();
         page.inputNameUserRegistration(TestValue.NAME);
-        page.inputEmailUserRegistration(TestValue.LOGIN);
-        page.inputPasswordUserRegistration(TestValue.PASSWORD);
+        page.inputEmailUserRegistration(TestValue.TEST_LOGIN_ONE);
+        page.inputPasswordUserRegistration(TestValue.TEST_PASSWORD_ONE);
         page.clickButtonRegistrationByFullFolder();
         pageLogin.waitForLoadEntrance();
         boolean actual = driver.findElement(LoginStellar.TITLE_ENTRANCE).isDisplayed();
         System.out.println(actual);
         Assert.assertTrue(actual);
         page.clickButtonPersonalAccount();
-        pageLogin.inputEmailLoginAccount(TestValue.LOGIN);
-        pageLogin.inputPasswordLoginAccount(TestValue.PASSWORD);
+        pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+        pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
         pageLogin.clickLoginInAccount();
         pageLogin.waitForInvisibilityLoadingAnimation();
         String accessToken = pageDelete.getTokenAccess();
@@ -44,16 +44,21 @@ public class RegistrationWebTest extends BaseTest {
     public void checkErrorRegistrationStellar() {
         RegistrationStellar page = new RegistrationStellar(driver);
         LoginStellar pageLogin = new LoginStellar(driver);
+        DeleteStellar pageDelete = new DeleteStellar(driver);
         page.open();
         page.clickButtonPersonalAccount();
         page.clickButtonPersonalAccountRegistration();
         page.inputNameUserRegistration(TestValue.NAME);
-        page.inputEmailUserRegistration(TestValue.LOGIN);
+        page.inputEmailUserRegistration(TestValue.TEST_LOGIN_ONE);
         page.inputPasswordUserRegistration(TestValue.PASSWORD_ERROR);
         page.clickButtonRegistrationByFullFolder();
         String actual = page.getTextIncorrectPass();
         System.out.println(actual);
         String expected = "Некорректный пароль";
         Assert.assertEquals(expected, actual);
+        String accessToken = pageDelete.getTokenAccess();
+        if (accessToken != null) {
+            pageDelete.deleteUserStellar(accessToken);
+        }
     }
 }
