@@ -19,7 +19,7 @@ public class RegistrationWebTest extends BaseTest {
         page.clickButtonPersonalAccount();
         page.clickButtonPersonalAccountRegistration();
         page.inputNameUserRegistration(TestValue.NAME);
-        page.inputEmailUserRegistration(TestValue.TEST_LOGIN_ONE);
+        page.inputEmailUserRegistration(TestValue.TEST_EMAIL_ONE);
         page.inputPasswordUserRegistration(TestValue.TEST_PASSWORD_ONE);
         page.clickButtonRegistrationByFullFolder();
         pageLogin.waitForLoadEntrance();
@@ -27,7 +27,7 @@ public class RegistrationWebTest extends BaseTest {
         System.out.println(actual);
         Assert.assertTrue(actual);
         page.clickButtonPersonalAccount();
-        pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+        pageLogin.inputEmailLoginAccount(TestValue.TEST_EMAIL_ONE);
         pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
         pageLogin.clickLoginInAccount();
         pageLogin.waitForInvisibilityLoadingAnimation();
@@ -49,7 +49,7 @@ public class RegistrationWebTest extends BaseTest {
         page.clickButtonPersonalAccount();
         page.clickButtonPersonalAccountRegistration();
         page.inputNameUserRegistration(TestValue.NAME);
-        page.inputEmailUserRegistration(TestValue.TEST_LOGIN_ONE);
+        page.inputEmailUserRegistration(TestValue.TEST_EMAIL_ONE);
         page.inputPasswordUserRegistration(TestValue.PASSWORD_ERROR);
         page.clickButtonRegistrationByFullFolder();
         String actual = page.getTextIncorrectPass();

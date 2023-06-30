@@ -21,7 +21,7 @@ public class ExitTest extends BaseTest {
         page.clickButtonPersonalAccount();
         page.clickButtonPersonalAccountRegistration();
         page.inputNameUserRegistration(TestValue.NAME);
-        page.inputEmailUserRegistration(TestValue.TEST_LOGIN_ONE);
+        page.inputEmailUserRegistration(TestValue.TEST_EMAIL_ONE);
         page.inputPasswordUserRegistration(TestValue.TEST_PASSWORD_ONE);
         page.clickButtonRegistrationByFullFolder();
         pageLogin.waitForLoadEntrance();
@@ -38,7 +38,7 @@ public class ExitTest extends BaseTest {
         page.transitionMainPage();
         try {
             page.clickButtonPersonalAccount();
-            pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+            pageLogin.inputEmailLoginAccount(TestValue.TEST_EMAIL_ONE);
             pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
             pageLogin.clickLoginInAccount();
         } catch (Exception e) {
@@ -60,7 +60,7 @@ public class ExitTest extends BaseTest {
         ExitStellar pageExit = new ExitStellar(driver);
         page.open();
         page.clickButtonPersonalAccount();
-        pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+        pageLogin.inputEmailLoginAccount(TestValue.TEST_EMAIL_ONE);
         pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
         pageLogin.clickLoginInAccount();
         pageLogin.waitForInvisibilityLoadingAnimation();

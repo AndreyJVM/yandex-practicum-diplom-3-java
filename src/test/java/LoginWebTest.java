@@ -21,7 +21,7 @@ public class LoginWebTest extends BaseTest {
         page.clickButtonPersonalAccount();
         page.clickButtonPersonalAccountRegistration();
         page.inputNameUserRegistration(TestValue.NAME);
-        page.inputEmailUserRegistration(TestValue.TEST_LOGIN_ONE);
+        page.inputEmailUserRegistration(TestValue.TEST_EMAIL_ONE);
         page.inputPasswordUserRegistration(TestValue.TEST_PASSWORD_ONE);
         page.clickButtonRegistrationByFullFolder();
         pageLogin.waitForLoadEntrance();
@@ -38,7 +38,7 @@ public class LoginWebTest extends BaseTest {
         page.transitionMainPage();
         try {
             page.clickButtonPersonalAccount();
-            pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+            pageLogin.inputEmailLoginAccount(TestValue.TEST_EMAIL_ONE);
             pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
             pageLogin.clickLoginInAccount();
         } catch (Exception e) {
@@ -58,7 +58,7 @@ public class LoginWebTest extends BaseTest {
         RegistrationStellar page = new RegistrationStellar(driver);
         LoginStellar pageLogin = new LoginStellar(driver);
         pageLogin.clickButtonEntranceMainPage();
-        pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+        pageLogin.inputEmailLoginAccount(TestValue.TEST_EMAIL_ONE);
         pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
         pageLogin.clickLoginInAccount();
         String actual = pageLogin.getTextPlaceOnOrder();
@@ -74,7 +74,7 @@ public class LoginWebTest extends BaseTest {
         RegistrationStellar page = new RegistrationStellar(driver);
         LoginStellar pageLogin = new LoginStellar(driver);
         page.clickButtonPersonalAccount();
-        pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+        pageLogin.inputEmailLoginAccount(TestValue.TEST_EMAIL_ONE);
         pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
         pageLogin.clickLoginInAccount();
         String actual = pageLogin.getTextPlaceOnOrder();
@@ -92,7 +92,7 @@ public class LoginWebTest extends BaseTest {
         pageLogin.clickButtonPersonalAccount();
         page.clickButtonPersonalAccountRegistration();
         pageLogin.clickButtonRegAfterPersonalAccount();
-        pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+        pageLogin.inputEmailLoginAccount(TestValue.TEST_EMAIL_ONE);
         pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
         pageLogin.clickLoginInAccount();
         String actual = pageLogin.getTextPlaceOnOrder();
@@ -110,7 +110,7 @@ public class LoginWebTest extends BaseTest {
         pageLogin.clickButtonEntranceMainPage();
         pageLogin.clickResoveryPassword();
         pageLogin.clickEntranceAfterClickRecoveryPassword();
-        pageLogin.inputEmailLoginAccount(TestValue.TEST_LOGIN_ONE);
+        pageLogin.inputEmailLoginAccount(TestValue.TEST_EMAIL_ONE);
         pageLogin.inputPasswordLoginAccount(TestValue.TEST_PASSWORD_ONE);
         pageLogin.clickLoginInAccount();
         String actual = pageLogin.getTextPlaceOnOrder();
