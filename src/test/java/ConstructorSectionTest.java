@@ -1,48 +1,58 @@
-import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import main.page.ConstructorSectionStellar;
-import main.page.RegistrationStellar;
-import org.junit.Assert;
-import org.junit.Before;
+import main.page.MainPage;
 import org.junit.Test;
+import static com.codeborne.selenide.Selenide.open;
+
+
 
 public class ConstructorSectionTest extends BaseTest {
-    @Before
-    public void setUp() {
-        super.setUp();
-        RegistrationStellar page = new RegistrationStellar(driver);
-        page.open();
+
+    @Test
+    @DisplayName("Переход к разделу Булки")
+    public void clickBunsSectionButtonTest() {
+        open(MainPage.MAIN_PAGE_URL, MainPage.class)
+                .clickSaucesButton()
+                .clickBunsButton()
+                .isBunsHeaderIsDisplayed();
     }
 
     @Test
-    @DisplayName("Проверка перехода раздела Соусы в конструкторе")
-    @Description("Проверка на наличие надписи")
-    public void checkTransitionSauce() {
-        ConstructorSectionStellar pageSection = new ConstructorSectionStellar(driver);
-        pageSection.selectSectionConstructorSauce();
-        Assert.assertTrue(pageSection.checkSectionSauce());
+    @DisplayName("Переход к разделу Соусы")
+    public void clickSaucesSectionButtonTest() {
+        open(MainPage.MAIN_PAGE_URL, MainPage.class)
+                .clickSaucesButton()
+                .isSaucesHeaderIsDisplayed();
     }
 
     @Test
-    @DisplayName("Проверка перехода раздела Начинки в  конструкторе")
-    @Description("Проверка на наличие надписи")
-    public void checkTransitionFiling() {
-        ConstructorSectionStellar pageSection = new ConstructorSectionStellar(driver);
-        pageSection.selectSectionConstructorFiling();
-        Boolean excepted = true;
-        Boolean actual = pageSection.checkSectionFiling();
-        Assert.assertEquals(excepted, actual);
+    @DisplayName("Переход к разделу Начинки")
+    public void clickFillingsSectionButtonTest() {
+        open(MainPage.MAIN_PAGE_URL, MainPage.class)
+                .clickFillingsButton()
+                .isFillingsHeaderIsDisplayed();
     }
 
     @Test
-    @DisplayName("Проверка перехода раздела Булки в конструкторе")
-    @Description("Проверка на наличие надписи")
-    public void checkTransitionBun() {
-        ConstructorSectionStellar pageSection = new ConstructorSectionStellar(driver);
-        pageSection.selectSectionConstructorSauce();
-        pageSection.selectSectionConstructorBun();
-        Boolean excepted = true;
-        Boolean actual = pageSection.checkSectionBun();
-        Assert.assertEquals(excepted, actual);
+    @DisplayName("Скролл к разделу Булки")
+    public void scrollBunsSectionTest() {
+        open(MainPage.MAIN_PAGE_URL, MainPage.class)
+                .scrollToBunsHeader()
+                .isBunsHeaderIsDisplayed();
+    }
+
+    @Test
+    @DisplayName("Скролл к разделу Соусы")
+    public void scrollSaucesSectionTest() {
+        open(MainPage.MAIN_PAGE_URL, MainPage.class)
+                .scrollToSaucesHeader()
+                .isSaucesHeaderIsDisplayed();
+    }
+
+    @Test
+    @DisplayName("Скролл к разделу Начинки")
+    public void scrollFillingsSectionTest() {
+        open(MainPage.MAIN_PAGE_URL, MainPage.class)
+                .scrollToFillingsHeader()
+                .isFillingsHeaderIsDisplayed();
     }
 }

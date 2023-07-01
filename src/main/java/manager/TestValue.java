@@ -1,4 +1,4 @@
-package main.page;
+package manager;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
