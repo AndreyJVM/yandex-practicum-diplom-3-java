@@ -39,22 +39,10 @@ public class SignInPage {
     @FindBy(how = How.XPATH, using = "//div/p/a[text()='Войти']")
     private SelenideElement enterLinkButton;
 
-    @Step("Ожидаем появления кнопки авторизации")
-    public void waitForSignInButtonDisplayed() {
-        signInButton.shouldBe(Condition.visible);
-    }
-
     @Step("Клик по кнопке Зарегистрироваться")
     public SignUpPage clickSignUpButton() {
         signUpButton.click();
         return page(SignUpPage.class);
-    }
-
-    @Step("Подождать пока не появится кнопка Войти")
-    public SignInPage waitForEnterButtonDisplayed() {
-        enterButton.shouldBe(Condition.visible);
-        signInButton.shouldBe(Condition.enabled);
-        return this;
     }
 
     @Step("Ввод email")
@@ -97,11 +85,6 @@ public class SignInPage {
     public boolean isEnterButtonExist() {
         enterButton.shouldBe(Condition.visible);
         return enterButton.exists();
-    }
-
-    @Step("Проверить сообщение об ошибке")
-    public boolean isErrorMessageExist() {
-        return errorMessage.exists();
     }
 
     @Step("Проверка отображения текста с ошибкой")

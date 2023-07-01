@@ -3,7 +3,10 @@ import main.page.SignInPage;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.open;
-
+/**
+ * Проверяем:
+ * Выход из личного кабинета через кнопку Выйти
+ */
 public class ExitTest extends BaseTest {
     @Test
     @DisplayName("Выход из личного кабинета через кнопку Выйти")

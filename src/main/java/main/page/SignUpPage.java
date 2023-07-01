@@ -27,9 +27,6 @@ public class SignUpPage {
     @FindBy(how = How.XPATH, using = "//a[text()='Войти']")
     private SelenideElement signUpPageEnterButton;
 
-    @FindBy(how = How.XPATH, using = "//p[text()='Некорректный пароль']")
-    private SelenideElement errorMessage;
-
     @Step("Ввод имени")
     public SignUpPage setName(String name) {
         nameField.setValue(name);

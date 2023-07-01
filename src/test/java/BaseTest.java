@@ -9,7 +9,12 @@ import manager.BrowserFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-
+/**
+ * Родительский класс для тестов, содержит
+ * создание фейкового пользователя
+ * метод для выбора браузера yandex/chrome
+ * и метод для удаления пользователя и закрытия браузера
+ */
 public class BaseTest {
     public static final User user = UserGenerator.getUser();
     public WebDriver driver;

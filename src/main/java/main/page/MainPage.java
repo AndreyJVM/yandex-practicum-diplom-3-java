@@ -142,12 +142,6 @@ public class MainPage {
         return this;
     }
 
-    @Step("Загрузка конструктора")
-    public MainPage constructionShouldBeVisible() {
-        constructorContainer.shouldBe(Condition.visible);
-        return this;
-    }
-
     @Step("Проверка сообщения об ошибке")
     public boolean isErrorMessageExist() {
         return errorMessage.exists();

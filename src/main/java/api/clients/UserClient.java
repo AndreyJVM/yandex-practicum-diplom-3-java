@@ -5,9 +5,11 @@ import api.models.User;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-
 import static io.restassured.RestAssured.given;
 
+/**
+ * Настрока ручку на регистрацию, удаление, логирование пользователя
+ */
 public class UserClient extends Client {
 
     private static final String REGISTER = "auth/register/";

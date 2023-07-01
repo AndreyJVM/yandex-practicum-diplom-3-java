@@ -14,7 +14,12 @@ import main.page.MainPage;
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
+/**
+ * Проверяем:
+ * Регистрация пользователя - успешная
+ * Регистрация пользователя - некорректная
+ * Удаляем пользователей после того как создали
+ */
 public class RegistrationWebTest{
 
     private UserClient userClient;
@@ -22,7 +27,6 @@ public class RegistrationWebTest{
     protected String name = UserGenerator.getUser().getName();
     protected String email = UserGenerator.getUser().getEmail();
     protected String password = UserGenerator.getUser().getPassword();
-
 
     @Test
     @DisplayName("Регистрация пользователя - успешная")

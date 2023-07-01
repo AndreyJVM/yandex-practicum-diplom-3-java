@@ -10,8 +10,6 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class UserProfilePage {
 
-    public final static String URL_USER_PROFILE_PAGE = "https://stellarburgers.nomoreparties.site/account/profile";
-
     @FindBy(how = How.XPATH, using = "//a[text()='Профиль']")
     private SelenideElement userProfileButton;
 

@@ -4,7 +4,12 @@ import main.page.SignInPage;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.open;
-
+/**
+ * Проверяем:
+ * Переход из Личного кабинета на главную страницу через кнопку Конструтор
+ * Переход из Личного кабинета на главную страницу через кнопку Лого
+ * Провека перехода по клику на «Личный кабинет»
+ */
 public class TransitionTest extends BaseTest {
     @Test
     @DisplayName("Переход из Личного кабинета на главную страницу через кнопку Конструтор")

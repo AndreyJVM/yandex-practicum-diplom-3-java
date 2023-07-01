@@ -4,7 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+/**
+ * Паттерн Фабрика:
+ * реализуем выбор бразера yandex/chrome
+ */
 public class BrowserFactory {
 
     public static WebDriver getDriver(String browserName){

@@ -5,7 +5,13 @@ import main.page.SignUpPage;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.open;
-
+/**
+ * Проверяем:
+ * Вход по кнопке «Войти в аккаунт» на главной странице
+ * Вход через кнопку «Личный кабинет
+ * Вход через кнопку в форме регистрации
+ * Вход через кнопку в форме восстановления пароля
+ */
 public class LoginWebTest extends BaseTest {
 
     @Test

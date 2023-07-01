@@ -2,9 +2,11 @@ import io.qameta.allure.junit4.DisplayName;
 import main.page.MainPage;
 import org.junit.Test;
 import static com.codeborne.selenide.Selenide.open;
-
-
-
+/**
+ * Проверяем:
+ * Переход к разделу: Булки, Соусы, Начинки
+ * Скролл к разделу: Булки, Соусы, Начинки
+ */
 public class ConstructorSectionTest extends BaseTest {
 
     @Test

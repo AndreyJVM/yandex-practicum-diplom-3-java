@@ -1,15 +1,14 @@
 package api.generator;
 
 import api.models.User;
-import net.datafaker.Faker;
+import manager.TestValue;
 
 public class UserGenerator {
-    static Faker faker = new Faker();
 
     public static User getUser() {
-        String name = faker.name().firstName();
-        String email = faker.internet().emailAddress();
-        String password = faker.password().toString();
+        String name = TestValue.TEST_NAME_ONE;
+        String email = TestValue.TEST_EMAIL_ONE;
+        String password = TestValue.TEST_PASSWORD_ONE;
 
         return new User(email, password, name );
     }
