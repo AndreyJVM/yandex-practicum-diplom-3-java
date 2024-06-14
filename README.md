@@ -7,7 +7,7 @@
 ![Linkedin-url](https://img.shields.io/badge/RestAssured-version_4.4.0-blue)
 ![Linkedin-url](https://img.shields.io/badge/Lombok-version_1.18.28-blue)
 
-
+![](src/main/resources/images/StellarBurgers.png)
 
 ### *We need to test a program that helps you order a burger in [Stellar Burgers](https://stellarburgers.nomoreparties.site/)*
 **Task:** Describe the elements you will use in tests using Page Object. 
