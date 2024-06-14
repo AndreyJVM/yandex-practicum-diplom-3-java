@@ -13,31 +13,31 @@
 **Task:** Describe the elements you will use in tests using Page Object. 
 Test the functionality in **Google Chrome and Yandex Browser**:
 
-1. **Registration:** `src/test/RegistrationWebTest.java`
+**1. Registration:** `src/test/RegistrationWebTest.java`
 * successful registration.
 * error for incorrect password. The minimum password is 6 characters.
 ---
 
-2. **Sing in:** `src/test/LoginWebTest.java`
+**2. Sing in:** `src/test/LoginWebTest.java`
 * login using the `Sing in` button on the main page,
 * login through the personal account button,
 * login via the button in the registration form,
 * login via the button in the password recovery form.
 ---
 
-3. **Go to your personal account :** `src/test/TransitionTest.java`
+**3. Go to your personal account :** `src/test/TransitionTest.java`
 * Check the transition by clicking on “Personal Account”
 ---
 
-4. **Transition from your personal account to the designer:** `src/test/`
+**4. Transition from your personal account to the designer:** `src/test/`
 * Check the transition by clicking on “Constructor” and on the Stellar Burgers logo.
 ---
 
-5. **Logout:** `src/test/ExitTest.java`
+**5. Logout:** `src/test/ExitTest.java`
 * Check the exit using the “Logout” button in your personal account.
 ---
 
-6. **Section "Constructor"** `src/test/ConstructorSectionTest.java`
+**6. Section "Constructor"** `src/test/ConstructorSectionTest.java`
 * check that transitions to sections work
   * «Rolls»,
   * «Sauces»,
