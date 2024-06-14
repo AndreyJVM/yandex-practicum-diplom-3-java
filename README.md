@@ -19,34 +19,34 @@
 Test the functionality in **Google Chrome and Yandex Browser**:
 ---
 1. **Registration:** `src/test/RegistrationWebTest.java`
-* Успешную регистрацию.
-* Ошибку для некорректного пароля. Минимальный пароль — шесть символов.
+* successful registration.
+* error for incorrect password. The minimum password is 6 characters.
 ---
 
 2. **Sing in:** `src/test/LoginWebTest.java`
-* вход по кнопке «Войти в аккаунт» на главной,
-* вход через кнопку «Личный кабинет»,
-* вход через кнопку в форме регистрации,
-* вход через кнопку в форме восстановления пароля.
+* login using the `Sing in` button on the main page,
+* login through the personal account button,
+* login via the button in the registration form,
+* login via the button in the password recovery form.
 ---
 
-3. **Переход в личный кабинет :** `src/test/TransitionTest.java`
-* Проверь переход по клику на «Личный кабинет»
+3. **Go to your personal account :** `src/test/TransitionTest.java`
+* Check the transition by clicking on “Personal Account”
 ---
 
-4. **Переход из личного кабинета в конструктор:** src/test/
-* Проверь переход по клику на «Конструктор» и на логотип Stellar Burgers.
+4. **Transition from your personal account to the designer:** `src/test/`
+* Check the transition by clicking on “Constructor” and on the Stellar Burgers logo.
 ---
 
-5. **Выход из аккаунта:** `src/test/ExitTest.java`
-* Проверь выход по кнопке «Выйти» в личном кабинете.
+5. **Logout:** `src/test/ExitTest.java`
+* Check the exit using the “Logout” button in your personal account.
 ---
 
-6. **Раздел «Конструктор»** src/test/ConstructorSectionTest
-* Проверь, что работают переходы к разделам:
-  * «Булки»,
-  * «Соусы»,
-  * «Начинки».
+6. **Section "Constructor"** `src/test/ConstructorSectionTest.java`
+* check that transitions to sections work
+  * «Rolls»,
+  * «Sauces»,
+  * «Fillings».
 ---
 ### Contacts:
 
