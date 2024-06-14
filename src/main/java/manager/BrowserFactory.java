@@ -5,8 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 /**
- * Паттерн Фабрика:
- * реализуем выбор бразера yandex/chrome
+ * Factory
+ * implement browser selection yandex/chrome
  */
 public class BrowserFactory {
 

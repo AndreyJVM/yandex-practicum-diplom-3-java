@@ -4,7 +4,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 public class TestValue extends RandomStringUtils {
     /**
-     * РСодержит тестовые данные для создания пользователя такие как: логин, пароль, имя
+     * Contains test data for creating a user such as: login, password, name
      */
     public static final String
             TEST_EMAIL_ONE = randomAlphabetic(10).toLowerCase() + "@yandex.ru",
