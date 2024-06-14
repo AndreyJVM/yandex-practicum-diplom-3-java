@@ -1,5 +1,4 @@
 # Task 3: Web-application: #
-### frameworks and dependencies: ###
 
 ---
 ![Linkedin-url](https://img.shields.io/badge/Java-_11-red)
@@ -13,7 +12,6 @@
 
 ---
 
----
 ### *We need to test a program that helps you order a burger in [Stellar Burgers](https://stellarburgers.nomoreparties.site/)*
 **Task:** Describe the elements you will use in tests using Page Object.
 Test the functionality in **Google Chrome and Yandex Browser**:
