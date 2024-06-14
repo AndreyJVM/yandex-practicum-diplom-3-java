@@ -11,35 +11,34 @@ import static com.codeborne.selenide.Selenide.page;
 public class MainPage {
     public static String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site/";
 
-    //Локаторы
-    //Кнопка Войти в аккаунт
+    //login button
     @FindBy(how = How.XPATH, using = "//button[text()='Войти в аккаунт']") //
     private SelenideElement enterAccountButton;
 
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Оформить заказ')]") //
     private SelenideElement createOrderButton;
 
-    //Кнопка Личный кабинет
+    //personal account button
     @FindBy(how = How.XPATH, using = "//p[text()='Личный Кабинет']") //
     private SelenideElement accountButton;;
 
-    //Заголовок Соберите бургер
+    //title build a burger
     @FindBy(how = How.XPATH, using = "//h1[text()='Соберите бургер']")
     private SelenideElement constructorHeader;
 
-    // Раздел Булки
+    // rolls section
     @FindBy(how = How.XPATH, using = "//div[span[text()='Булки']]")
     private SelenideElement bunsButton;
 
-    // Раздел Соусы
+    // section sauces
     @FindBy(how = How.XPATH, using = "//div[span[text()='Соусы']]")
     private SelenideElement sauceButton;
 
-    //Раздел Начинки
+    // section fillings
     @FindBy(how = How.XPATH, using = "//*[text()='Начинки']")
     private SelenideElement fillingsButton;
 
-    //Заголовки
+    // headers
     @FindBy(how = How.XPATH, using = "//h2[text()='Булки']")
     private SelenideElement bunsHeader;
 
@@ -49,7 +48,7 @@ public class MainPage {
     @FindBy(how = How.XPATH, using = "//h2[text()='Начинки']")
     private SelenideElement fillingsHeader;
 
-    //Наименования класса  после выбора раздела
+    // class names after selecting a section
     @FindBy(how = How.CLASS_NAME, using = "tab_tab_type_current__2BEPc")
     private SelenideElement sectionIngredients;
 

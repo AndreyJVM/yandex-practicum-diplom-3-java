@@ -8,7 +8,7 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
 /**
- * Настрока ручку на регистрацию, удаление, логирование пользователя
+ * Configuring the handle for registration, deletion, logging of the user
  */
 public class UserClient extends Client {
 

@@ -5,7 +5,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 /**
- * Класс содержит ссылку на тестируемый сайт и настройку RestAssured
+ * The class contains a link to the site under test and the RestAssured setting
  */
 public class Client {
     public static final String BASE_URL = "https://stellarburgers.nomoreparties.site/";
