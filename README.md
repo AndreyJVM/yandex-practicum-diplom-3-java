@@ -10,9 +10,11 @@
 ---
 
 ### *We need to test a program that helps you order a burger in [Stellar Burgers](https://stellarburgers.nomoreparties.site/)*
+
 **Task:** Describe the elements you will use in tests using Page Object.
 Test the functionality in **Google Chrome and Yandex Browser**:
 ---
+
 1. **Registration:** `src/test/RegistrationWebTest.java`
 * successful registration.
 * error for incorrect password. The minimum password is 6 characters.
